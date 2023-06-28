@@ -5,11 +5,12 @@ body{
     margin: 0;
     font-family: 'Inter', sans-serif;
     
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 /* navbar page */
 .navbar{
-    padding: 0 3%;
+    width: 96%;
+    padding: 0 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,6 +23,10 @@ body{
     color: white;
     font-weight: 400;
     line-height: 29px;
+   
+}
+.navbar .right{
+    padding: 0 10px 0 0;
 }
 
 .navbar .right a{
@@ -30,21 +35,23 @@ body{
     font-weight: 400;
     line-height: 29px;
     padding: 10px;
+   
 }
 
 /* landpage  */
 
 .landPage{
-    padding: 2%;
+    position: relative;
     display: flex;
     height: 85vh;
-    flex-direction: column;
+    justify-content: space-between;
     margin: 2px;
 }
 
 .landPage .landpage-left{
-    width:800px;
+    width: 60%;
     height: 29vh;
+    padding: 15px;
 }
 
 .landpage-left h1{
@@ -77,8 +84,32 @@ body{
 }
 
 .landpage-right img{
-    position: relative;
-    max-width: 95vh;
-    top:-60px;
-    right: -380px;
+    position: absolute;
+    width: 60%;
+    top:150px; 
+    right: 0px; 
+}
+
+/* singup form */
+
+.container{
+    padding: 0 8%;
+}
+
+.signUpForm >div input{
+    width: 90%;
+    height: 35px;
+    margin: 13px;
+}
+
+.signUpForm button, #alreadyUser{
+    width: 120px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+}
+
+::placeholder{
+    color: black;
 }

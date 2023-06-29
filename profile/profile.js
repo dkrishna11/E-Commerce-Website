@@ -1,13 +1,19 @@
 let logout=document.getElementById("logout");
 let changePassword=document.getElementById("changePassword");
 let saveInfo=document.getElementById("saveInfo");
+let userPhoto=document.getElementById("userPhoto");
+
+let userData=document.getElementsByClassName("right")[0];
+
 
 logout.addEventListener("click", ()=>{
     sessionStorage.removeItem("loginDetails");
     window.location.href="../index.html";
 });
+
 let currentUser=JSON.parse(sessionStorage.getItem("loginDetails"));
 let data=JSON.parse(localStorage.getItem("user"));
+
 
 //change password function:
 changePassword.addEventListener("click", (e)=>{
@@ -41,6 +47,7 @@ saveInfo.addEventListener("click", (e)=>{
     let firstName=document.getElementById("firstName").value;
     let lastName=document.getElementById("lastName").value;
 
+   
     if(firstName.trim()==="" || lastName.trim()===""){
         alert("Please Fill all the Fields");
     }
@@ -78,4 +85,10 @@ function localStorageSaveInfo(firstName, lastName, userEmail){
     }
     localStorage.setItem("user", JSON.stringify(data))
 }
+
+window.addEventListener("click", ()=>{
+    let innerHTML=`User Name:${currentUser.firstName}`;
+    userPhoto.innerHTML=innerHTML;
+    userData.append(userPhoto)
+})
 

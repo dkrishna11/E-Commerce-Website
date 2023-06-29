@@ -25,12 +25,11 @@ body{
     line-height: 29px;
    
 }
-
 .navbar .right{
     padding: 0 10px 0 0;
 }
 
-.navbar .right p{
+.navbar .right a{
     text-decoration: none;
     color:#ffffffc5;
     font-weight: 400;
@@ -39,29 +38,29 @@ body{
    
 }
 
+
+/* shopping list */
+
 .container{
-    padding: 0 8%;
+    display: flex;
+    margin-top: 1px;
 }
 
-.container h1{
-    text-align: center;
-    font-size: 35px;
-}
-.myProfile >div input, .changePassword >div input{
-   
-    width: 90%;
-    height: 30px;
-    margin: 13px;
+.filterData{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 150vh;
 }
 
-.myProfile button, .changePassword button, button{
-    width: 140px;
-    height: 30px;
+.filterData input{
+    display: block;
+}
+
+.filterData div{
     background-color: black;
     color: white;
-    border-radius: 2px;
-}
-
-::placeholder{
-    color: black;
+    border-bottom: 1px solid white;
+    padding: 20px;
 }

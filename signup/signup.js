@@ -7,10 +7,11 @@ let signUpBtn=document.getElementById("signUpBtn");
 // if user exits
 
 alreadyUser.addEventListener("click", ()=>{
-    window.location.href="login.html"
+    window.location.href="../login/login.html"
 });
 
-signUpBtn.addEventListener("click", ()=>{
+signUpBtn.addEventListener("click", (e)=>{
+    e.preventDefault();
     let firstName=document.getElementById("firstName").value;
     let lastName=document.getElementById("lastName").value;
     let email=document.getElementById("email").value;
@@ -45,23 +46,37 @@ signUpBtn.addEventListener("click", ()=>{
     }
         
 });
+function generateKey(){
+    let token = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const length = 16;
+    for (let i = 0; i < length; i++) {
+        token += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return token;
+}
 
 function updateUserDetails(firstName, lastName, email, password){
     let signUpUser={
         firstName:firstName,
         lastName:lastName,
         email:email,
-        password:password
+        password:password,
+        tokenKey:generateKey()
     }
     if(localStorage.getItem("user")){
+        sessionStorage.setItem("loginDetails", JSON.stringify(signUpUser));
         let userDetails=JSON.parse(localStorage.getItem("user")); //converting stringarray into array obj
         userDetails.push(signUpUser);
         localStorage.setItem("user", JSON.stringify(userDetails));
+        
     }else{
+        sessionStorage.setItem("loginDetails", JSON.stringify(signUpUser));
         let userDetails=[signUpUser];
         localStorage.setItem("user", JSON.stringify(userDetails));
+        
     }
-    window.location.href="./profile/index.html";
+    window.location.href="../profile";
 }
 
 function checkIfUserExist(email){
@@ -72,3 +87,4 @@ function checkIfUserExist(email){
     }
     return false;
 }
+

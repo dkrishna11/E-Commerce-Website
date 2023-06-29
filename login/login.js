@@ -16,8 +16,16 @@ loginBtn.addEventListener("click", ()=>{
             let flag=0;
             for(let i=0;i<loginUser.length;i++){
                 if(email===loginUser[i].email && password===loginUser[i].password){
+                    let obj={
+                        firstName:loginUser[i].firstName,
+                        lastName:loginUser[i].lastName,
+                        email:loginUser[i].email,
+                        password:loginUser[i].password,
+                        tokenKey:loginUser[i].tokenKey
+                    }
+                    sessionStorage.setItem("loginDetails", JSON.stringify(obj));
                     flag=1;
-                    window.location.href="./profile/index.html";
+                    window.location.href="../profile";
                     alert("Login Successful!");  
                 }        
             }
@@ -28,4 +36,4 @@ loginBtn.addEventListener("click", ()=>{
         }
 
     }
-})
+});

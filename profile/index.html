@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    test
+    <nav class="navbar">
+        <div class="left">
+            <a href="#">Shopping Cart</a>
+        </div>
+    </nav>
+    <!-- my profile` -->
+    <div class="container">
+        <h1>My Profile</h1>
+        <form action="" class="myProfile">
+            <div>
+                <label for="firstName">First Name:</label><br>
+                <input type="text"  id="firstName" placeholder="First Name">
+            </div>
+            <div>
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" id="lastName" placeholder="Last Name">
+            </div>
+            <br>
+            <button type="submit" id="saveInfo">Save Info</button>
+        </form>
+    </div>
+     <!-- edit Password   -->
+     <div class="container">
+        <h1>Edit Password</h1>
+        <form action="" class="changePassword">
+            <div>
+                <label for="oldPassword">Password:</label><br>
+                <input type="password" id="oldPassword" placeholder="Old Password">
+            </div>
+            <div>
+                <label for="newPassword">Password:</label><br>
+                <input type="password" id="newPassword" placeholder="New Password">
+            </div>
+            <div>
+                <label for="confirmPassword">Confirm Password:</label><br>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            </div>
+            <br>
+            <button type="submit" id="changePassword">Change Password</button>
+        </form> <br>
+        <button id="logout">Logout</button>
+        <br>
+    </div>
+
+    <script src="profile.js"></script>
 </body>
 </html>

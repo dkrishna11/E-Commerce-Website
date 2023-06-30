@@ -44,14 +44,21 @@ body{
 .container{
     display: flex;
     margin-top: 1px;
+    /* width: 100%;
+    height: 90.5%;
+    display: flex;
+    margin: 0 auto; */
 }
 
 .filterData{
-    position: fixed;
+    flex: 0 0 200px;
+    width: 200px;
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 150vh;
+    background-color:white;
+    box-shadow: 0px 0px 5px black;
+    z-index: 10;
+    gap: 0.1rem;
 }
 
 .filterData input{
@@ -62,5 +69,122 @@ body{
     background-color: black;
     color: white;
     border-bottom: 1px solid white;
-    padding: 20px;
+    padding: 10px;
+    
+}
+
+.container .right{
+    margin-left: 15px;
+    width: 95%;
+    height: 100vh;
+}
+.container .right input{
+    width: 92%;
+    height: 35px;
+    
+}
+.input-icons i {
+    position: absolute;
+}
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+.icon {
+    padding: 10px;
+    min-width: 40px;
+    margin: 13px;
+}
+  
+.input-field {
+    margin: 13px;
+    padding-left: 35px;
+    border-radius: 5px;
+}
+#select{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+
+}
+
+#select button{
+    width: 18%;
+    height: 36px;
+    margin-top: 5px;
+    margin-left: 10px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#select .active{
+    background-color: black;
+    color: white;
+}
+
+#mens-collection, #womens-collection,#electronics, #jewelery{
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+    margin: 25px 10px;
+}
+
+.productPoster{
+    flex-grow: 0.1;
+    flex-basis: 240px;
+    background-color: #dfbaba;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.productPoster img{
+    width: 100%;
+    height: 270px;
+    object-fit:fill;
+    border-radius: 8px 8px 0 0;
+}
+.shopList .hide{
+    display: none;
+}
+
+.card-content{
+    padding: 0 5px;
+}
+.title{
+    padding: 2px;
+    height: 60px;
+    font-size: 10px;
+    font-weight: 400;
+}
+.card-content p{
+    font-size: 14px;
+    font-weight: 900;
+    margin: 5px;
+    padding: 5px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+}
+
+.price h4{
+    color: rgb(175, 29, 10);
+}
+
+.price p{
+    color: rgb(0, 0, 0);
+}
+
+.addToCart{
+    width: 100%;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 0 0 8px 8px ;
 }

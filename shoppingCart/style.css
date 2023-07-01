@@ -125,8 +125,7 @@ body{
     background-color: black;
     color: white;
 }
-
-#mens-collection, #womens-collection,#electronics, #jewelery{
+.cart{
     display: flex;
     gap:20px;
     flex-wrap: wrap;
@@ -147,9 +146,7 @@ body{
     object-fit:fill;
     border-radius: 8px 8px 0 0;
 }
-.shopList .hide{
-    display: none;
-}
+
 
 .card-content{
     padding: 0 5px;
@@ -170,7 +167,7 @@ body{
 .price {
     display: flex;
     justify-content: space-between;
-    margin-top: -10px;
+    margin-top: -20px;
 }
 
 .price h4{
@@ -187,4 +184,16 @@ body{
     color: white;
     background-color: black;
     border-radius: 0 0 8px 8px ;
+}
+
+.shopList .hide{
+    display: none;
+}
+.colorPick{
+    display: flex;
+}
+.color{
+    width:5px;
+    height: 5px;
+    border-radius: 50%;
 }

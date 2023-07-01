@@ -5,6 +5,8 @@ let jewelery =document.getElementById("jewelery");
 let results=[];
 let myCartArray = []; 
 
+let logout=document.getElementById("logout");
+
 
 let fetchData;
 let search=document.getElementsByClassName("fa-search")[0];
@@ -17,6 +19,17 @@ let blue=document.getElementById("blue");
 let green=document.getElementById("green");
 let black=document.getElementById("black");
 let white=document.getElementById("white");
+
+
+let rate=document.getElementById("rate");
+let cards=document.getElementsByClassName("cart");
+let applyFilter=document.getElementById("applyFilter");
+
+
+logout.addEventListener("click", ()=>{
+    sessionStorage.removeItem("loginDetails");
+    window.location.href="../index.html";
+});
 
 // filter cart
 const filterCart = e=>{
@@ -193,7 +206,16 @@ function randomSize(){
     const randomIndex = Math.floor(Math.random() * length);
     return size[randomIndex];
 }
-let color=randomColor();
+
+
+rate.addEventListener("input",()=>{
+    console.log(rate.value)
+    const rateValue=rate.value;
+    let rateResults=results.filter((e)=>{
+        return Math.floor(e.rating.rate)===rateValue;
+    })
+})
+
 fetchApi();
 
 

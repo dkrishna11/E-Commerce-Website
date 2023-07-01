@@ -13,11 +13,9 @@
             <a href="#">MeShop.</a>
         </div>
         <div class="right">
-            <a href="#">Home</a>
-            <a href="../login/login.html">Login</a>
-            <a href="../signup/signup.html">SignUp</a>
-            <a href="#myCart">My Cart </a>
-            <a href="#">Profile</a>
+            <a href="../myCart/index.html">My Cart </a>
+            <a href="../profile/index.html">Profile</a>
+            <a href="../index.html" id="logout">LogOut</a>
         </div>
     </nav> 
     
@@ -25,28 +23,32 @@
         <div class="left">
             <form action="" class="filterData">
                 <div id="color">
-                    <input type="checkbox" name="Red" id="red"><label for="Red">Red</label>
-                    <input type="checkbox" name="Blue" id="blue"><label for="Blue">Blue</label>
-                    <input type="checkbox" name="Green" id="green"><label for="Green">Green</label>
-                    <input type="checkbox" name="Black" id="black"><label for="Black">Black</label>
-                    <input type="checkbox" name="White" id="white"><label for="White">White</label>
+                    <h3>Color</h3>
+                    <li><input type="checkbox" name="Red" id="red"><label for="Red">Red</label></li>
+                    <li><input type="checkbox" name="Blue" id="blue"><label for="Blue">Blue</label></li>
+                    <li><input type="checkbox" name="Green" id="green"><label for="Green">Green</label></li>
+                    <li> <input type="checkbox" name="Black" id="black"><label for="Black">Black</label></li>
+                    <li><input type="checkbox" name="White" id="white"><label for="White">White</label></li>
                 </div>
                 <div id="sizes">
-                    <input type="checkbox" name="S" id="S"><label for="S">S</label> 
-                    <input type="checkbox" name="M" id="M"><label for="M">M</label> 
-                    <input type="checkbox" name="L" id="L"><label for="L">L</label> 
-                    <input type="checkbox" name="XL" id="XL"><label for="XL">XL</label> 
+                    <h3>Size</h3>
+                    <li><input type="checkbox" name="S" id="S"><label for="S">S</label> </li>
+                    <li><input type="checkbox" name="M" id="M"><label for="M">M</label> </li>
+                    <li><input type="checkbox" name="L" id="L"><label for="L">L</label> </li>
+                    <li><input type="checkbox" name="XL" id="XL"><label for="XL">XL</label> </li>
                 </div>
                 <div id="Rating">
-                    <input type="range" name="" id="">
+                    <h3>Rating</h3>
+                    <input type="range" name="" id="rate" min="0" max="5">
                 </div>
-                <div id="Price Range">
-                    <input type="checkbox" name="" id=""><label for="">$0 to $25</label> 
-                    <input type="checkbox" name="" id=""><label for="">$25 to $50</label> 
-                    <input type="checkbox" name="" id=""><label for="">$50 to $100</label> 
-                    <input type="checkbox" name="" id=""><label for="">$100 onwards</label> 
+                <div id="Price-Range">
+                    <h3>Price Range</h3>
+                    <li><input type="checkbox" name="" id=""><label for="">$0 to $25</label> </li>
+                    <li><input type="checkbox" name="" id=""><label for="">$25 to $50</label> </li>
+                    <li><input type="checkbox" name="" id=""><label for="">$50 to $100</label> </li>
+                    <li><input type="checkbox" name="" id=""><label for="">$100 onwards</label> </li>
                 </div>
-                <button>Apply Filter</button>
+                <button id="applyFilter">Apply Filter</button>
             </form>
         </div>
         <div class="right">
@@ -62,17 +64,29 @@
                 <button data-name="jewelery">Electronics</button>
             </div>
             <div class="shopList">
-                <h2>Men's Collection</h2>
-                <div id="mens-collection" class="cart" data-name="mensCollection"></div>
                 
-                <h2>women's clothing</h2>
-                <div id="womens-collection" class="cart" data-name="womensCollection"></div>
+                <div class="cart" data-name="mensCollection">
+                    <h2>Men's Collection</h2>
+                    <div id="mens-collection" class="card"></div>
+                </div>
                 
-                <h2>Electronics</h2>
-                <div id="electronics" class="cart" data-name="electronics"></div>
+                
+                <div class="cart" data-name="womensCollection">
+                    <h2>women's clothing</h2>
+                    <div  id="womens-collection" class="card"></div>
+                </div>
+                
+                
+                <div  class="cart" data-name="electronics">
+                    <h2>Electronics</h2>
+                    <div id="electronics" class="card"></div>
+                </div>
 
-                <h2>Jewelery</h2>
-                <div id="jewelery" class="cart" data-name="jewelery"></div>
+               
+                <div class="cart" data-name="jewelery">
+                    <h2>Jewelery</h2>
+                    <div id="jewelery" class="card"></div>
+                </div>
             </div>    
             </div>
         </div>

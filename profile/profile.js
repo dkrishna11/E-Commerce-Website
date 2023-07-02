@@ -41,13 +41,19 @@ changePassword.addEventListener("click", (e)=>{
 })
 
 //saving user updated informaation:
+let first=document.getElementById("firstName");
+let last=document.getElementById("lastName");
+first.value=`${currentUser.firstName}`;
+last.value=`${currentUser.lastName}`;
+
+
+console.log('First Name:', first);
+console.log('Last Name:', last);
 
 saveInfo.addEventListener("click", (e)=>{
     e.preventDefault();
-    let firstName=document.getElementById("firstName").value;
-    let lastName=document.getElementById("lastName").value;
-
-   
+    let firstName=first.value;
+    let lastName=last.value;
     if(firstName.trim()==="" || lastName.trim()===""){
         alert("Please Fill all the Fields");
     }

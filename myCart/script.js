@@ -78,11 +78,23 @@ function randomSize(){
 }
 
 function removeItems(id){
+    var index = -1;
     cartItems=cartDetails.filter((item)=>{
-         return item.id != id
+        if(item.id !== id){
+            index = item.id;
+            return index;
+        }
      })
+     if (index !== -1) {
+        cartItems.splice(index, 1);
+      }
+      console.log(cartItems)
+      location.reload();
+      location.href = location.href;
      localStorage.setItem("cart",JSON.stringify(cartItems))
-     displayCart(cartItems)
+     window.addEventListener("load", ()=>{
+        displayCart(cartItems)
+     })
    }
 
 

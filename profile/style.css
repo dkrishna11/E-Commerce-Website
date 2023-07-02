@@ -47,11 +47,12 @@ body{
     text-align: center;
     font-size: 35px;
 }
-.myProfile >div input, .changePassword >div input{
+.myProfile >div input, .changePassword >div input, .myProfile >div p{
    
     width: 90%;
     height: 30px;
     margin: 13px;
+    border: 1px solid black;
 }
 
 .myProfile button, .changePassword button, button{
